@@ -6,7 +6,7 @@ exclude:
   - README.md
 
 name: Wiky
-#host: yourdomain.com
+host: agathewiky.github.io
 desc: Some description of your site.
 
 custom:
@@ -26,7 +26,7 @@ meta:
     author:
         name: wiky
         email: we.agathe@gmail.com
-        disqus: agawiky                             # Disqus缩略标识
+        disqus: agathewiky                             # Disqus缩略标识
         gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
         github: agathewiky                          # GitHub账号
         gravatar: 34048bba022a44ff87af3970ee404710  # Gravatar头像标识
