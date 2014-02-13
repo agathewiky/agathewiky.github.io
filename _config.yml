@@ -6,18 +6,17 @@ exclude:
   - README.md
 
 name: D++的个人博客
-host: agathewiky.github.io
-desc: 站在巨人的肩膀上.
+#host: agathewiky.github.io
+desc: 站在巨人的肩膀上~滋滋~~的猴子~.
 
 custom:
     category:
-        default: 心随笔动
-        #learning: 积羽沉舟
+        default: 心随手指头动
         learning: 杂学旁收
         mistake: 折戟沉沙
     categories:
       - name:  default
-        title: 心随笔动
+        title: 心随手指头动
       - name: learning
         title: 杂学旁收
       - name:  mistake
