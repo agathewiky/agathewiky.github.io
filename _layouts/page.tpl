@@ -40,10 +40,7 @@
 	
 	<div class="block block-about">
 		<h3>About</h3>
-		<figure>
-			{% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %}
-			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
-		</figure>
+        <a href="http://weibo.com/u/2270545477?s=6uyXnP" target="_blank"><img border="0" src="http://service.t.sina.com.cn/widget/qmd/2270545477/80e3196e/1.png"/></a>
 		<p>Write something about yourself.</p>
 	</div>
 	
