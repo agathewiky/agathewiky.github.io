@@ -11,8 +11,8 @@ desc: 站在巨人的肩膀上.
 
 custom:
     category:
-        default: default
-        another: mistake
+        default: 默认随笔
+        mistake: 曾经折戟沉沙的地方
     categories:
       - name:  default
         title: 随笔
