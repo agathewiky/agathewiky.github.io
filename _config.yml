@@ -5,18 +5,21 @@ permalink: /posts/:title.html
 exclude:
   - README.md
 
-name: D++
+name: D++的个人博客
 host: agathewiky.github.io
 desc: 站在巨人的肩膀上.
 
 custom:
     category:
-        default: 默认随笔
-        mistake: 曾经折戟沉沙的地方
+        default: 心随笔动
+        #learning: 积羽沉舟
+        learning: 杂学旁收
+        mistake: 折戟沉沙
     categories:
       - name:  default
-        title: 随笔
-
+        title: 心随笔动
+      - name: learning
+        title: 杂学旁收
       - name:  mistake
         title: 折戟沉沙
 
