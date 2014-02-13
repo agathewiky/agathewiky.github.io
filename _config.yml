@@ -7,18 +7,18 @@ exclude:
 
 name: D++
 host: agathewiky.github.io
-desc: Some description of your site.
+desc: 站在巨人的肩膀上.
 
 custom:
     category:
-        default: Default
-        another: Another
+        default: default
+        another: mistake
     categories:
       - name:  default
-        title: Default
+        title: 随笔
 
-      - name:  another
-        title: Another
+      - name:  mistake
+        title: 折戟沉沙
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
