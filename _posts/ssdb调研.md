@@ -1,0 +1,40 @@
+#SSDB调研
+官方简介：一个高性能的支持丰富数据结构的 NoSQL 数据库, 用于替代 **Redis**.
+
+单机支撑十亿级(T级)别的noSQL数据库
+
+适合存储集合数据, 如 list, hash, zset
+
+
+
+#Twemproxy
+Twemproxy 是一个支持memcache、redis协议 高效并轻量级的proxy，twitter出品！
+
+* 负载均衡功能
+* 减少后端服务器的连接数
+
+twemproxy + ssdb 据idea说，已经有线上的应用了。
+
+redis作者如下说：
+
+> Twemproxy的强大之处在于可以通过配置的方式让它禁用掉失败的结点，同时还能在一段时间后进行重试，抑或使用指定的键->服务器映射。这意味着在将Redis用作数据存储时，它可以对Redis数据集进行分片（禁用掉结点驱逐）；在将Redis用作缓存时，它可以启用结点驱逐以实现简单的高可用性。
+
+> Twemproxy速度很快，真的很快，它几乎与直接访问Redis速度一样快。我敢说在最差的情况下，性能也只不过才损失20%而已。 
+
+> 我对性能问题唯一的想法是当在多个实例上使用命令时，我觉得MGET还有改进空间。
+
+
+#问题与不足
+* 不支持针对多个值的操作，比如取sets的子交并补等（MGET 和 DEL 除外）
+* 不支持Redis的事务操作
+* 单机持久化，levelDB仅调用了fwrite，并没有sync，实际只写到了Page Cache，宕机会丢数据
+* 多节点同步延迟
+* LevelDB 是一个对于顺序读写非常友好的数据库实现，但是对于随机读的性能会比较糟糕，它更适合一些批量读写操作，如监控数据的存储，时间序列数据等等
+
+##引用
+
+* [Twemproxy官方](https://github.com/twitter/twemproxy)   
+* [存储分片及twemproxy核心解读](http://www.wzxue.com/%E5%AD%98%E5%82%A8%E5%88%86%E7%89%87%E5%92%8Ctwemproxy%E6%A0%B8%E5%BF%83%E8%A7%A3%E8%AF%BB/)   
+* [Twemproxy, a Redis proxy from Twitter](http://antirez.com/news/44)   
+* [SSDB: Redis 的替代？](http://www.wzxue.com/ssdb/)
+
